@@ -553,10 +553,16 @@ function createProductCard(product) {
     const badgeText = categoryNames[product.category];
     const colorEmoji = colorEmojis[product.color] || '🌷';
 
+    // Использует реальное фото если есть, иначе emoji
+    const hasImage = true; // <-- ПОСТАВЬ true КОГДА ДОБАВИШЬ ФОТО
+    const imageContent = hasImage
+        ? `<img src="images/tulip-${product.id}.jpg" alt="${product.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="product-card__emoji" style="display:none">${colorEmoji}</span>`
+        : `<span class="product-card__emoji">${colorEmoji}</span>`;
+
     return `
         <article class="product-card" data-id="${product.id}" data-category="${product.category}">
             <div class="product-card__image">
-                <span class="product-card__emoji">${colorEmoji}</span>
+                ${imageContent}
                 <span class="product-card__badge ${categoryClass}">${badgeText}</span>
                 ${product.popular ? '<span class="product-card__popular">★ Популярный</span>' : ''}
             </div>
