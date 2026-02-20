@@ -569,7 +569,6 @@ function createProductCard(product) {
                 </div>
                 <div class="product-card__footer">
                     <div class="product-card__price">${product.price}₽ <span>/ шт</span></div>
-                    <a href="#contacts" class="product-card__btn">Заказать</a>
                 </div>
             </div>
         </article>
@@ -678,21 +677,6 @@ function smoothScrollTo(target) {
     }
 }
 
-/**
- * Handle contact form submission
- */
-function handleContactFormSubmit(e) {
-    e.preventDefault();
-
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData);
-
-    // Here you would typically send the data to a server
-    // For now, just show a success message
-    alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
-    e.target.reset();
-}
-
 // ===== Event Listeners =====
 
 // Filter tabs
@@ -730,12 +714,6 @@ mobileNavLinks.forEach(link => {
         smoothScrollTo(target);
     });
 });
-
-// Contact form
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', handleContactFormSubmit);
-}
 
 // Header scroll effect
 let lastScroll = 0;

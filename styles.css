@@ -1,21 +1,21 @@
-/* ===== CSS Variables - Весенняя палитра ===== */
+/* ===== CSS Variables - Свежая весенняя палитра ===== */
 :root {
-    /* Primary Colors */
-    --color-primary: #FF9A8B;
-    --color-primary-dark: #E8887A;
-    --color-accent: #F9D423;
-    --color-accent-dark: #E5C41F;
+    /* Primary Colors - оранжево-желтая гамма */
+    --color-primary: #FF8C42;
+    --color-primary-dark: #E57A3A;
+    --color-accent: #FFD23F;
+    --color-accent-dark: #E5BD35;
 
     /* Secondary Colors */
-    --color-green: #56AB2F;
-    --color-green-dark: #4A9627;
-    --color-pink: #FF6B9D;
-    --color-pink-dark: #E55A8A;
-    --color-purple: #C471ED;
+    --color-green: #4CAF50;
+    --color-green-dark: #43A047;
+    --color-coral: #FF7043;
+    --color-coral-dark: #E64A19;
+    --color-purple: #9C27B0;
 
     /* Neutral Colors */
-    --color-bg: #FFF9F0;
-    --color-bg-alt: #FFF3E6;
+    --color-bg: #FFFBF5;
+    --color-bg-alt: #FFF8E7;
     --color-white: #FFFFFF;
     --color-black: #1A1A1A;
     --color-gray-100: #F5F5F5;
@@ -45,7 +45,7 @@
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
-    --shadow-color: 0 4px 20px rgba(255, 154, 139, 0.25);
+    --shadow-color: 0 4px 20px rgba(255, 140, 66, 0.25);
 
     /* Transitions */
     --transition-fast: 0.2s ease;
@@ -221,7 +221,7 @@ input, textarea {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, #FFE5D9 0%, #FFF9F0 50%, #E8F5E9 100%);
+    background: linear-gradient(135deg, #FFF3E0 0%, #FFFBF5 50%, #E8F5E9 100%);
     z-index: -2;
 }
 
@@ -232,7 +232,7 @@ input, textarea {
     right: 0;
     bottom: 0;
     background-image:
-        radial-gradient(circle at 20% 80%, rgba(255, 154, 139, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(255, 140, 66, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(249, 212, 35, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 40% 40%, rgba(86, 171, 47, 0.1) 0%, transparent 40%);
     z-index: -1;
@@ -311,7 +311,7 @@ input, textarea {
     width: 100%;
     max-width: 450px;
     aspect-ratio: 1;
-    background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-primary) 100%);
+    background: linear-gradient(135deg, var(--color-coral) 0%, var(--color-primary) 100%);
     border-radius: var(--radius-lg);
     display: flex;
     flex-direction: column;
@@ -336,14 +336,14 @@ input, textarea {
 }
 
 .btn--primary {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-pink) 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-coral) 100%);
     color: var(--color-white);
     box-shadow: var(--shadow-color);
 }
 
 .btn--primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(255, 154, 139, 0.4);
+    box-shadow: 0 6px 25px rgba(255, 140, 66, 0.4);
 }
 
 .btn--outline {
@@ -461,7 +461,7 @@ input, textarea {
 
 .category-card.active {
     border-color: var(--color-primary);
-    background: linear-gradient(135deg, rgba(255, 154, 139, 0.1) 0%, rgba(249, 212, 35, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(255, 140, 66, 0.1) 0%, rgba(255, 210, 63, 0.1) 100%);
 }
 
 .category-card__icon {
@@ -547,7 +547,7 @@ input, textarea {
 .search-input:focus {
     outline: none;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 4px rgba(255, 154, 139, 0.15);
+    box-shadow: 0 0 0 4px rgba(255, 140, 66, 0.15);
 }
 
 .search-input::placeholder {
@@ -616,7 +616,7 @@ input, textarea {
 }
 
 .product-card__badge.late {
-    background: var(--color-pink);
+    background: var(--color-coral);
 }
 
 .product-card__emoji {
@@ -735,6 +735,72 @@ body.mobile-nav-open {
     text-align: center;
 }
 
+/* ===== Contact Messengers ===== */
+.contact-form-info {
+    padding: var(--space-lg);
+    background: var(--color-bg);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.contact-form-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    color: var(--color-black);
+}
+
+.contact-form-info > p {
+    color: var(--color-gray-500);
+    margin-bottom: var(--space-lg);
+}
+
+.contact-messengers {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.messenger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: 1rem;
+    background: var(--color-white);
+    border: 2px solid var(--color-gray-200);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-black);
+    transition: var(--transition-fast);
+}
+
+.messenger-btn:hover {
+    border-color: var(--color-primary);
+    background: var(--color-bg);
+}
+
+.messenger-btn--whatsapp {
+    border-color: #25D366;
+    color: #25D366;
+}
+
+.messenger-btn--whatsapp:hover {
+    background: #25D366;
+    color: var(--color-white);
+}
+
+.messenger-btn--avito {
+    border-color: #00AFFF;
+    color: #00AFFF;
+}
+
+.messenger-btn--avito:hover {
+    background: #00AFFF;
+    color: var(--color-white);
+}
+
 /* ===== About Section ===== */
 .about {
     padding: var(--space-xxl) 0;
@@ -773,7 +839,7 @@ body.mobile-nav-open {
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    background: linear-gradient(135deg, rgba(255, 154, 139, 0.15) 0%, rgba(249, 212, 35, 0.15) 100%);
+    background: linear-gradient(135deg, rgba(255, 140, 66, 0.1) 0%, rgba(255, 210, 63, 0.1) 100%);
     border-radius: var(--radius-md);
 }
 
@@ -824,7 +890,7 @@ body.mobile-nav-open {
     width: 60px;
     height: 60px;
     margin: 0 auto var(--space-md);
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-pink) 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-coral) 100%);
     color: var(--color-white);
     border-radius: var(--radius-full);
     display: flex;
@@ -948,7 +1014,7 @@ body.mobile-nav-open {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 4px rgba(255, 154, 139, 0.15);
+    box-shadow: 0 0 0 4px rgba(255, 140, 66, 0.15);
 }
 
 .form-group textarea {
