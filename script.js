@@ -139,14 +139,6 @@ const products = [
         price: 70,
         description: 'Изящный сорт с крупным бутоном',
         popular: false
-    },
-    {
-        id: 18,
-        name: 'Greenland',
-        color: 'green',
-        price: 100,
-        description: 'Зеленый бахромчатый с розовыми штрихами',
-        popular: false
     }
 ];
 
