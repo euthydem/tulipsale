@@ -608,6 +608,16 @@ body.mobile-nav-open {
     color: var(--color-white);
 }
 
+.messenger-btn--telegram {
+    border-color: #0088cc;
+    color: #0088cc;
+}
+
+.messenger-btn--telegram:hover {
+    background: #0088cc;
+    color: var(--color-white);
+}
+
 /* ===== About Section ===== */
 .about {
     padding: var(--space-xxl) 0;

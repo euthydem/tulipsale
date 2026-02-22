@@ -24,15 +24,15 @@ const products = [
         id: 3,
         name: 'Memphis',
         color: 'white',
-        price: 80,
-        description: 'Изысканные белые бутоны, идеальные для букетов',
+        price: 70,
+        description: ' элегантный сорт класса Триумф, отличающийся крупными бокаловидными бутонами (до 8-9 см) с изысканным градиентом от бледно-розового (почти белого) у основания до ярко-фуксиевого к краям лепестков',
         popular: true
     },
     {
         id: 4,
         name: 'Creme Fraiche',
         color: 'white',
-        price: 75,
+        price: 70,
         description: 'Нежный кремово-молочный оттенок с лёгким теплым подтоном. Выглядит мягко и дорого.',
         popular: true
     },
@@ -56,7 +56,7 @@ const products = [
         id: 7,
         name: 'Roman Power',
         color: 'pink',
-        price: 95,
+        price: 70,
         description: 'Яркий, сочный малиново-розовый оттенок с плотным бокалом. Эффектный и заметный.',
         popular: true
     },
@@ -88,7 +88,7 @@ const products = [
         id: 11,
         name: 'Strong Gold',
         color: 'yellow',
-        price: 85,
+        price: 70,
         description: 'Насыщенный солнечно-жёлтый тюльпан. Очень стойкий и один из самых популярных',
         popular: true
     },
@@ -96,7 +96,7 @@ const products = [
         id: 12,
         name: 'Pink Flag',
         color: 'pink',
-        price: 95,
+        price: 70,
         description: 'Классический ярко-розовый сорт с крупным бутоном. Универсален для букетов.',
         popular: false
     },
@@ -128,7 +128,7 @@ const products = [
         id: 16,
         name: 'Birindisi',
         color: 'pink',
-        price: 90,
+        price: 70,
         description: 'Нежно-розовый с белой каймой по краю лепестков. Лёгкий и романтичный сорт.',
         popular: false
     },
@@ -190,7 +190,7 @@ function createProductCard(product) {
                 <h3 class="product-card__title">${product.name}</h3>
                 <p class="product-card__desc">${product.description}</p>
                 <div class="product-card__footer">
-                    <div class="product-card__price">${product.price}₽ <span>/ шт</span></div>
+                    <div class="product-card__price">${product.price}₽ <span>/ шт (от 1000 шт)</span></div>
                 </div>
             </div>
         </article>
