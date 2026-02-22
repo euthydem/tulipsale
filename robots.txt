@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://uralflowers.ru/sitemap.xml
+
+Host: https://uralflowers.ru
